@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "3833ef00-6a29-4263-8e1d-da61d8f10896",
+		"name": "devise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sign in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "abc@gmail.com",
+						"type": "default"
+					},
+					{
+						"key": "password",
+						"value": "12345678",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/sign_in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign out",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "Y3W-db8gbB0s2ZTiE_F2wg",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "b1Vh0tLMjXJpLIpClAhbgA",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/sign_out",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"sign_out"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change password",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "NQ1RNn25ugKJxYgxBVBl9w",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "SjtaJw3pdO78B31JB6KqBQ",
+						"type": "default"
+					},
+					{
+						"key": "expiry",
+						"value": "1659030924",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Password\": 12345678,\n    \"PasswordConfirmation\": 12345678\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/change_password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"change_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "GGe2_nb3wfRyopAVOKLXUg",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "WxKFp1Z3Az9ph6W93ZDG8g",
+						"type": "default"
+					},
+					{
+						"key": "expiry",
+						"value": "1659030924",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"2asd@gmail.com\",\n    \"password\": 12345678,\n    \"name\": \"new account\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user name",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "NQ1RNn25ugKJxYgxBVBl9w",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "SjtaJw3pdO78B31JB6KqBQ",
+						"type": "default"
+					},
+					{
+						"key": "expiry",
+						"value": "1659030924",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"edit name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "details users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "Z4giMm4rjq9tQ1V2RJmz_w",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "wzaLYjP5wwSbrSZCsP-wlQ",
+						"type": "default"
+					},
+					{
+						"key": "expiry",
+						"value": "1659033255",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "NQ1RNn25ugKJxYgxBVBl9w",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "SjtaJw3pdO78B31JB6KqBQ",
+						"type": "default"
+					},
+					{
+						"key": "expiry",
+						"value": "1659033255",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"page\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create link",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "Y3W-db8gbB0s2ZTiE_F2wg",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "b1Vh0tLMjXJpLIpClAhbgA",
+						"type": "default"
+					},
+					{
+						"key": "expiry",
+						"value": "1659030924",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"link\": \"google.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/links",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"links"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "link stat",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "lslR4yNe0gMabaSfGKzriQ",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "uqTpb2GmkEEnsQblNOhW7w",
+						"type": "default"
+					},
+					{
+						"key": "expiry",
+						"value": "1659033255",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/links/1/stat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"links",
+						"1",
+						"stat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "details link",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "Z4giMm4rjq9tQ1V2RJmz_w",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "wzaLYjP5wwSbrSZCsP-wlQ",
+						"type": "default"
+					},
+					{
+						"key": "expiry",
+						"value": "1659033255",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index links",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "NQ1RNn25ugKJxYgxBVBl9w",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "SjtaJw3pdO78B31JB6KqBQ",
+						"type": "default"
+					},
+					{
+						"key": "expiry",
+						"value": "1659033255",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"page\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/links",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"links"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update link",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "NQ1RNn25ugKJxYgxBVBl9w",
+						"type": "default"
+					},
+					{
+						"key": "client",
+						"value": "SjtaJw3pdO78B31JB6KqBQ",
+						"type": "default"
+					},
+					{
+						"key": "expiry",
+						"value": "1659030924",
+						"type": "default"
+					},
+					{
+						"key": "uid",
+						"value": "abc@gmail.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Link\": \"sadfasf.com\",\n    \"Slug\": \"kodqhjlkmmm\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/links/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"links",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
